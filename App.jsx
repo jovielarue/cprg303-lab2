@@ -18,10 +18,14 @@ function App() {
     'Do homework for mobile app dev',
   ]);
 
+  const addTask = task => {
+    setTasks([...tasks, task]);
+  };
+
   return (
     <SafeAreaView>
       <ToDoList tasks={tasks} setTasks={setTasks} />
-      <ToDoForm tasks={tasks} setTasks={setTasks} />
+      <ToDoForm tasks={tasks} addTask={addTask} />
     </SafeAreaView>
   );
 }

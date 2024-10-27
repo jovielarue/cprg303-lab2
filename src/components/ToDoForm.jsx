@@ -2,12 +2,12 @@ import React from 'react';
 import {View, StyleSheet, TextInput, Button} from 'react-native';
 import {useState} from 'react';
 
-export default function ToDoForm({tasks, setTasks}) {
+export default function ToDoForm({tasks, addTask}) {
   const [newTask, setNewTask] = useState('');
   console.log(tasks);
 
   const handleAdd = () => {
-    setTasks([...tasks, newTask]);
+    addTask(newTask);
   };
 
   return (
